@@ -1,0 +1,75 @@
+Revisi pertama
+-ubah slide event jangan ada warna putihnya
+
+Revisi kedua 19/12/2015
+- update semua height bila monitor 1440 ke bawah tidak perlu setengah monitor
+
+Revisi ketiga 15/01/2016
+- Navigasi ubah
+- Perbaiki Halaman What's Include#
+- Style Baru Halaman Grand Villa#
+- Style Baru Halaman Unique Private Villa
+
+QC Event , Style, Title dan implentasi Navigasi
+- accommodation-category.html#
+- accommodation-rate.html#
+- adultresort.html#
+- canggubali.html#
+- close-at-hand.html#
+
+- concept.html#
+- contact.html#
+- design.html#
+- designconcept.html#
+- dining.html#
+
+- eternal-restaurant.html#
+- gallery.html#
+- grandvilla.html#
+- homealike.html#
+- imperialvillabali.html#
+
+- index.html#
+- interconnecting.html#
+- location.html#
+- lounge.html#
+- news-detail.html#
+
+- news-download.html#
+- news-release.html#
+- news.html#
+- personal-butler.html#
+- personalbutler.html(di hide dulu=> duplicate page)
+
+- premierevillabali.html#
+- ruby-spa.html#
+- spainbali.html#
+- special-offer.html#
+- uniqueprivatevilla.html#
+
+- villabali.html#
+- villacategory.html#
+- wedding.html#
+- weddinginbali.html#
+- whatincluded.html#
+
+
+
+
+
+QC Event , Style, Title dan implentasi Navigasi
+- excursion.html
+- grandvilla.html
+
+- imperialvillabali.html
+- interconnecting.html
+
+- news.html
+
+- premierevillabali.html
+- privatedining.html
+- ruby-spa.html
+- spainbali.html
+
+- Navigasi small
+- Navigasi sub

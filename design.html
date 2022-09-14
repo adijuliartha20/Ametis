@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width,height=device-height">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Design</title>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+<link href="css/standardize.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+<link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.css">
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<link href="css/style.css" rel="stylesheet" />
+
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="js/slick/slick.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<script>
+var myCalendar;
+function doOnLoad() {
+	myCalendar = new dhtmlXCalendarObject(["calendar"]);
+	myCalendar.setDateFormat("%m/%d/%Y");		
+}
+</script>    
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-28190306-1', 'auto');
+ ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="js/fbparam.js"></script>
+<script type="text/javascript" src="js/fblib.js"></script>
+</head>
+<body class="body-no-scroll">
+<!-- Header Start -->
+<div class="navigation sub-navigation step-3 step-2 step-1 hidden-before-load transition_600 translateZ">
+	<div class="full-navigation">
+    	<div class="top clearfix">
+            <div class="logo left"><a href="index.html"><img src="img/logo.png" /></a></div>
+            <div class="links left">
+                <div class="link fade-top">
+                	<a href="uniqueprivatevilla.html">The Story</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="villacategory.html">Villas</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="dining.html">Dining</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="spainbali.html">Spa</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="weddinginbali.html">Experience</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="special-offer.html">Offers</a>
+                </div>
+            </div>
+            <div class="form-availability-top clearfix left">
+            	<script>
+				function gettgl()
+					{
+						var input_tgl = document.getElementById("calendar");
+						//document.getElementById("tglpecah").innerHTML = input_tgl.value; //utk test result
+						//explode the value
+						var str=input_tgl.value;
+						var res = str.split("/");
+						document.getElementById("frommonth").value = res[0];
+						document.getElementById("fromday").value = res[1];
+						document.getElementById("fromyear").value = res[2];
+					}
+				</script>
+                
+                <form target="dispoprice" name="idForm">
+                    <input type='hidden' name='showPromotions' value='1'>
+                    <input type='hidden' name='langue' value=''>
+                    <input type='hidden' name='Clusternames' value='ASIAIDHTLAmetisV'>
+					<input type='hidden' name='Hotelnames' value='ASIAIDHTLAmetisV'>
+                    <input type='hidden' id="frommonth" name='frommonth'>
+                    <input type='hidden' id="fromday" name='fromday'>
+                    <input type='hidden' id="fromyear" name='fromyear'>
+                    <div class="date-picker-top from left fa-input">
+                        <input type="text" name="check-in" id="calendar" class="input-calender form-input left  fade-top" placeholder="From" />
+                    </div>
+                    <div class="date-picker-top to left fa-input">
+                        <select name='nbdays' class="select-input form-input left  fade-top" required>
+                                    <option value="" disabled selected>No of night</option>
+                                    <option value='1'>1</option>
+                                    <option value='2' >2</option>
+                                    <option value='3' >3</option>
+                                    <option value='4' >4</option>
+                                    <option value='5' >5</option>
+                                    <option value='6' >6</option>
+                                    <option value='7' >7</option>
+                                    <option value='8' >8</option>
+                                    <option value='9' >9</option>
+                                    <option value='10' >10</option>
+                                    <option value='11' >11</option>
+                                    <option value='12' >12</option>
+                                    <option value='13' >13</option>
+                                    <option value='14' >14</option>
+                                    <option value='15' >15</option>
+                                    <option value='16' >16</option>
+                                    <option value='17' >17</option>
+                                    <option value='18' >18</option>
+                                    <option value='19' >19</option>
+                                    <option value='20' >20</option>
+                                    <option value='21' >21</option>
+                                    <option value='22' >22</option>
+                                    <option value='23' >23</option>
+                                    <option value='24' >24</option>
+                                    <option value='25' >25</option>
+                                    <option value='26' >26</option>
+                                    <option value='27' >27</option>
+                                    <option value='28' >28</option>
+                                    <option value='29' >29</option>
+                                    <option value='30' >30</option>
+                                    <option value='31' >31</option>
+                        </select> 
+                    </div>
+                    <div class="iata-code left fa-input">
+                        <input type="text" name="AccessCode" class="iata-code-input form-input fade-top" placeholder="IATA Code" />
+                    </div>
+                    <input type="button" class="btn-check-availability form-input left  fade-top" onclick='gettgl();hhotelDispoprice(this.form)' />
+                </form>
+            </div>
+            
+        </div>
+    </div>
+	
+    <div class="logo-mobile"><a href="index.html"><img src="img/logo-gray-mobile.png" /></a></div>
+    <div class="nav">
+        <div class="icon-nav">
+            <hr class="top transition_600">
+            <hr class="middle transition_300">
+            <hr class="bottom transition_600">
+        </div>        	
+    </div>
+    <div class="nav-curr-state">DESIGN</div>
+</div>
+
+<div class="overlay-mpu"></div>
+<div class="menu-pop-up transition_600" style="display:block;">
+	<div class="menu-top-mobile">
+    	<div class="close"><img src="img/close-mpu.png" /></div>
+        <div class="title-mtm">MENU</div>
+        <div class="list-mtm">
+        	<div class="lmtm">
+            	<a href="uniqueprivatevilla.html" class="sub-menu-mobile">The Story</a>
+            </div>
+            <div class="lmtm">
+            	<a href="villacategory.html" class="sub-menu-mobile">Villa</a>
+            </div>
+            <div class="lmtm">
+            	<a href="dining.html"  class="sub-menu-mobile">Dining</a>
+            </div>
+            <div class="lmtm">
+            	<a href="spainbali.html"  class="sub-menu-mobile">Spa</a>
+            </div>
+            <div class="lmtm">
+            	<a href="weddinginbali.html"  class="sub-menu-mobile">Experience</a>
+            </div>
+            <div class="lmtm">
+            	<a href="special-offer.html"  class="sub-menu-mobile">Offer</a>
+            </div>
+        </div>
+        <input type="button" value="BOOK NOW" class="book-now-mtm" />
+    </div>
+    
+    <div class="form-top-mobile">
+    	<form target="dispoprice" name="idForm2">
+            <input type='hidden' name='showPromotions' value='1'>
+            <input type='hidden' name='langue' value=''>
+            <input type='hidden' name='Clusternames' value='ASIAIDHTLAmetisV'>
+            <input type='hidden' name='Hotelnames' value='ASIAIDHTLAmetisV'>
+            <input type='hidden' id="frommonth_2" name='frommonth'>
+            <input type='hidden' id="fromday_2" name='fromday'>
+            <input type='hidden' id="fromyear_2" name='fromyear'>
+            <div class="close clearfix">
+                <a class="left"><span>&lt;</span><span>TO MENU</span></a>
+                <img src="img/close-ftm.png" class="right" />
+            </div>
+            <div class="title-ftm">BOOKING</div>
+            <div class="brief-ftm">
+                <p>CHECK ROOM AVAILABILITY,</p>
+                <p>RATES AND BOOK ONLINE.</p>
+            </div>
+            <div class="field-ftm clearfix">
+                <div class="lbl-ftm left">From</div>
+                <div class="input-ftm right"><input type="text" id="calendar_2" name="check-in" class="input-calender" placeholder="Choose Date" /></div>
+            </div>
+            <div class="field-ftm clearfix">
+                <div class="lbl-ftm left"></div>
+                <div class="input-ftm right">
+                    <select name='nbdays' class="select-night-mobile" required>
+                              <option value="" disabled selected>No of night</option>
+                              <option value='1'>1</option>
+                              <option value='2' >2</option>
+                              <option value='3' >3</option>
+                              <option value='4' >4</option>
+                              <option value='5' >5</option>
+                              <option value='6' >6</option>
+                              <option value='7' >7</option>
+                              <option value='8' >8</option>
+                              <option value='9' >9</option>
+                              <option value='10' >10</option>
+                              <option value='11' >11</option>
+                              <option value='12' >12</option>
+                              <option value='13' >13</option>
+                              <option value='14' >14</option>
+                              <option value='15' >15</option>
+                              <option value='16' >16</option>
+                              <option value='17' >17</option>
+                              <option value='18' >18</option>
+                              <option value='19' >19</option>
+                              <option value='20' >20</option>
+                              <option value='21' >21</option>
+                              <option value='22' >22</option>
+                              <option value='23' >23</option>
+                              <option value='24' >24</option>
+                              <option value='25' >25</option>
+                              <option value='26' >26</option>
+                              <option value='27' >27</option>
+                              <option value='28' >28</option>
+                              <option value='29' >29</option>
+                              <option value='30' >30</option>
+                              <option value='31' >31</option>
+                  </select> 
+                </div>
+            </div>
+            <div class="field-ftm clearfix">
+                <div class="input-ftm right"><input type="text" name="AccessCode" class="iata-code" placeholder="IATA Code" /></div>
+            </div>
+            <input type="button" value="Check Availability" class="check-availability-ftm" onclick='hhotelDispoprice(this.form)' />
+         </form>
+    </div>
+    
+    
+</div>
+<!-- Header End -->
+<!-- Slider Start -->
+<section class="section-slider loader">
+	<a href="index.html" class="logo"><img src="img/logo.png"></a>
+	<div id="sliders" class="sliders sliders-long-text">
+    	<!-- List Slider Start -->
+    	<div class="slide item">
+        	<div class="bg-slide" style="background:url(file/slide_4.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide">
+                <div class="brief-slide bslide-02">
+                    <div class="title qs-font">
+                        <p class="fade-effect transition_slide_text">THE DESIGN</p>
+                        <p class="fade-effect transition_slide_text">A Look of Tropical Elegance Where</p>
+                        <p class="fade-effect transition_slide_text">Comfort is Foremost</p>
+                    </div>
+                    <div class="bw40 fade-effect transition_slide_text"></div>
+                    <div class="sub-title fade-effect transition_slide_text qs-font">Discover</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide item">
+        	<div class="bg-slide" style="background:url(file/slide_1.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide">
+                <div class="brief-slide bslide-02">
+                    <div class="title qs-font">
+                        <p class="fade-effect transition_slide_text">THE LOCATION</p>
+                        <p class="fade-effect transition_slide_text">A Look of Tropical Elegance Where</p>
+                        <p class="fade-effect transition_slide_text">Comfort is Foremost</p>
+                    </div>
+                    <div class="bw40 fade-effect transition_slide_text"></div>
+                    <div class="sub-title fade-effect transition_slide_text qs-font">Discover</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide item" >
+        	<div class="bg-slide" style="background:url(file/slide_3.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide">
+                <div class="brief-slide bslide-02">
+                    <div class="title qs-font">
+                        <p class="fade-effect transition_slide_text">THE LOCATION</p>
+                        <p class="fade-effect transition_slide_text">A Look of Tropical Elegance Where</p>
+                        <p class="fade-effect transition_slide_text">Comfort is Foremost</p>
+                    </div>
+                    <div class="bw40 fade-effect transition_slide_text"></div>
+                    <div class="sub-title fade-effect transition_slide_text qs-font">Discover</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide item " >
+        	<div class="bg-slide" style="background:url(file/slide_5.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide">
+                <div class="brief-slide bslide-02">
+                    <div class="title qs-font">
+                        <p class="fade-effect transition_slide_text">THE LOCATION</p>
+                        <p class="fade-effect transition_slide_text">A Look of Tropical Elegance Where</p>
+                        <p class="fade-effect transition_slide_text">Comfort is Foremost</p>
+                    </div>
+                    <div class="bw40 fade-effect transition_slide_text"></div>
+                    <div class="sub-title fade-effect transition_slide_text qs-font">Discover</div>
+                </div>
+            </div>
+        </div>
+        <!-- List Slider End -->
+    </div>
+    <div class="num-info-slide">
+    	<span class="current-slide">1</span> / <span class="max-slide">4</span>
+    </div>
+    <div class="nav-bottom hidden-before-load  transition_600 translateZ"></div>
+    <div class="awards clearfix hidden-before-load transition_600 translateZ">
+    	<a href="#"><img src="img/award_1.jpg" /></a>
+    	<a href="#"><img src="img/award_2.jpg" /></a>
+        <a href="#"><img src="img/award_1.jpg" /></a>
+    	<a href="#"><img src="img/award_2.jpg" /></a>
+    </div>
+    
+</section>
+<!-- Slider End -->
+<section class="custom-section first-desciption-default">
+	<div id="the-design-txt" class="half-horizontal the-location-txt first-desciption  description_transition">
+    	<div class="middle text-section">
+            <h2 class="title top_transition">THE DESIGN</h2>
+            <div class="desc top_transition">
+                <p>Ametis is a refreshing interpretation of an intimate Balinese community featuring private villa compounds and public areas for social interaction. Each villa is a modern sanctuary that blends indigenous timber with glass and metal to create dramatic living and sleeping spaces that seemingly merge into the outdoors. Customized furnishings together with unique works of art reflect a look of tropical elegance where comfort is foremost.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="design-thumb" class="half-horizontal three-box three-box-scale clearfix design-thumb">
+    	<!-- List Design Start -->
+        <div class="thbox transition_600 scaling_low">
+        	<div class="bg-box" style="background:url(file/our-value-01.jpg) no-repeat center center; background-size:cover;">
+                <div class="content-our-value">
+                    <div class="border-desc bw40"></div>
+                    <div class="read-more"><a href="#">THE WALL</a></div>
+                </div>                
+            </div>
+        </div>
+        <div class="thbox transition_600 scaling_low">
+        	<div class="bg-box" style="background:url(file/our-value-02.jpg) no-repeat center center; background-size:cover;">
+                <div class="content-our-value">
+                    <div class="border-desc bw40"></div>
+                    <div class="read-more"><a href="#">THE DOOR</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="thbox transition_600 scaling_low">
+        	<div class="bg-box" style="background:url(file/our-value-03.jpg) no-repeat center center; background-size:cover;">
+                <div class="content-our-value">
+                    <div class="border-desc bw40"></div>
+                    <div class="read-more"><a href="#">THE HEALING TOOLS</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- List Design End -->
+    </div>
+</section>
+<!-- Footer Start -->
+<div id="footer" class="footer transition_600 scaling_low footer_scalling_low_effect">
+	<div class="first-footer">
+    	<div class=" middle clearfix">
+        	<div class="left">
+                <div class="social-media clearfix">
+                    <a href="https://www.facebook.com/ametisvillabali"><img src="img/fb.png"></a>
+                    <a href="https://twitter.com/ametisvillabali"><img src="img/twitter.png"></a>
+                    <a href="https://plus.google.com/u/0/+AmetisVillaBali"><img src="img/g+.png"></a>
+                    <a href="https://www.instagram.com/ametisvillabali/"><img src="img/insta.png"></a>
+                </div>
+                <div class="newsletter-subscribe">
+                    <div class="title qs-font">NEWSLETTER SUBSCRIPTION</div>
+                    <div class="form bb-white clearfix">
+                    <form action="http://ametisvillabali.createsend.com/t/i/s/hitye/" method="post" id="subForm">
+                                <input id="fieldEmail" name="cm-hitye-hitye" type="email" class="left email" required />
+                                <button type="submit" class="right">Subscribe</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="title qs-font">GET IN TOUCH</div>
+                <div class="bb-white"></div>
+                <div class="address">Jalan Pantai Batu Bolong, Canggu - Kuta, Bali, Indonesia</div>
+                <div class="detail-contact">
+                    <p><b>Phone:</b> +62 361 844 5567 <span>|</span> +62 828 9719 1888</p>
+                    <p><b>Fax:</b> +62 361 844 5557</p>
+                    <p><b>E-mail:</b> info@ametisvilla.com</p>
+                </div>
+            </div>
+        </div>
+    	
+    </div>
+    <div class="second-footer">
+    	<div class=" middle clearfix">
+        	<p class="left">Copyright &copy; 2011 ametis private villa</p>
+            <!-- Menu Buttom Start -->
+            <div class="links-bottom right">
+              <a href="contact.html">Contact Us</a>
+              <a href="ametisvillabali.smugmug.com">Media</a>
+              <a href="http://www.ametisvilla.com/wp/">News</a>
+              <a href="pressrelease.html">Press</a>
+              <a href="news-release.html">Awards</a>
+              <a href="review.html">Review</a>
+            </div>
+            <!-- Menu Buttom End -->
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+</body>
+</html>

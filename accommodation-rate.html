@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width,height=device-height">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Accommodation Rate</title>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+<link href="css/standardize.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+<link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.css">
+<link href="css/style.css" rel="stylesheet" />
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="js/slick/slick.js"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<script>
+var myCalendar;
+function doOnLoad() {
+	myCalendar = new dhtmlXCalendarObject(["calendar"]);
+	myCalendar.setDateFormat("%m/%d/%Y");		
+}
+</script>    
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-28190306-1', 'auto');
+ ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="js/fbparam.js"></script>
+<script type="text/javascript" src="js/fblib.js"></script>
+</head>
+<body class="body-no-scroll">
+<!-- Header Start -->
+<div class="navigation sub-navigation step-3 step-2 step-1 hidden-before-load transition_600 translateZ">
+	<div class="full-navigation">
+    	<div class="top clearfix">
+            <div class="logo left"><a href="index.html"><img src="img/logo.png" /></a></div>
+            <div class="links left">
+                <div class="link fade-top">
+                	<a href="uniqueprivatevilla.html">The Story</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="villacategory.html">Villas</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="dining.html">Dining</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="spainbali.html">Spa</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="weddinginbali.html">Experience</a>
+                </div>
+                <div class="link fade-top">
+                	<a href="special-offer.html">Offers</a>
+                </div>
+            </div>
+            <div class="form-availability-top clearfix left">
+            	<script>
+				function gettgl()
+					{
+						var input_tgl = document.getElementById("calendar");
+						//document.getElementById("tglpecah").innerHTML = input_tgl.value; //utk test result
+						//explode the value
+						var str=input_tgl.value;
+						var res = str.split("/");
+						document.getElementById("frommonth").value = res[0];
+						document.getElementById("fromday").value = res[1];
+						document.getElementById("fromyear").value = res[2];
+					}
+				</script>
+                
+                <form target="dispoprice" name="idForm">
+                    <input type='hidden' name='showPromotions' value='1'>
+                    <input type='hidden' name='langue' value=''>
+                    <input type='hidden' name='Clusternames' value='ASIAIDHTLAmetisV'>
+					<input type='hidden' name='Hotelnames' value='ASIAIDHTLAmetisV'>
+                    <input type='hidden' id="frommonth" name='frommonth'>
+                    <input type='hidden' id="fromday" name='fromday'>
+                    <input type='hidden' id="fromyear" name='fromyear'>
+                    <div class="date-picker-top from left fa-input">
+                        <input type="text" name="check-in" id="calendar" class="input-calender form-input left  fade-top" placeholder="From" />
+                    </div>
+                    <div class="date-picker-top to left fa-input">
+                        <select name='nbdays' class="select-input form-input left  fade-top" required>
+                                    <option value="" disabled selected>No of night</option>
+                                    <option value='1'>1</option>
+                                    <option value='2' >2</option>
+                                    <option value='3' >3</option>
+                                    <option value='4' >4</option>
+                                    <option value='5' >5</option>
+                                    <option value='6' >6</option>
+                                    <option value='7' >7</option>
+                                    <option value='8' >8</option>
+                                    <option value='9' >9</option>
+                                    <option value='10' >10</option>
+                                    <option value='11' >11</option>
+                                    <option value='12' >12</option>
+                                    <option value='13' >13</option>
+                                    <option value='14' >14</option>
+                                    <option value='15' >15</option>
+                                    <option value='16' >16</option>
+                                    <option value='17' >17</option>
+                                    <option value='18' >18</option>
+                                    <option value='19' >19</option>
+                                    <option value='20' >20</option>
+                                    <option value='21' >21</option>
+                                    <option value='22' >22</option>
+                                    <option value='23' >23</option>
+                                    <option value='24' >24</option>
+                                    <option value='25' >25</option>
+                                    <option value='26' >26</option>
+                                    <option value='27' >27</option>
+                                    <option value='28' >28</option>
+                                    <option value='29' >29</option>
+                                    <option value='30' >30</option>
+                                    <option value='31' >31</option>
+                        </select> 
+                    </div>
+                    <div class="iata-code left fa-input">
+                        <input type="text" name="AccessCode" class="iata-code-input form-input fade-top" placeholder="IATA Code" />
+                    </div>
+                    <input type="button" class="btn-check-availability form-input left  fade-top" onclick='gettgl();hhotelDispoprice(this.form)' />
+                </form>
+            </div>
+            
+        </div>
+    </div>
+	
+    <div class="logo-mobile"><a href="index.html"><img src="img/logo-gray-mobile.png" /></a></div>
+    <div class="nav">
+        <div class="icon-nav">
+            <hr class="top transition_600">
+            <hr class="middle transition_300">
+            <hr class="bottom transition_600">
+        </div>        	
+    </div>
+    <div class="nav-curr-state long-txt">ACCOMMODATION</div>
+</div>
+
+<div class="overlay-mpu"></div>
+<div class="menu-pop-up transition_600" style="display:block;">
+	<div class="menu-top-mobile">
+    	<div class="close"><img src="img/close-mpu.png" /></div>
+        <div class="title-mtm">MENU</div>
+        <div class="list-mtm">
+        	<div class="lmtm">
+            	<a href="uniqueprivatevilla.html" class="sub-menu-mobile">The Story</a>
+            </div>
+            <div class="lmtm">
+            	<a href="villacategory.html" class="sub-menu-mobile">Villa</a>
+            </div>
+            <div class="lmtm">
+            	<a href="dining.html"  class="sub-menu-mobile">Dining</a>
+            </div>
+            <div class="lmtm">
+            	<a href="spainbali.html"  class="sub-menu-mobile">Spa</a>
+            </div>
+            <div class="lmtm">
+            	<a href="weddinginbali.html"  class="sub-menu-mobile">Experience</a>
+            </div>
+            <div class="lmtm">
+            	<a href="special-offer.html"  class="sub-menu-mobile">Offer</a>
+            </div>
+        </div>
+        <input type="button" value="BOOK NOW" class="book-now-mtm" />
+    </div>
+    
+    <div class="form-top-mobile">
+    	<form target="dispoprice" name="idForm2">
+            <input type='hidden' name='showPromotions' value='1'>
+            <input type='hidden' name='langue' value=''>
+            <input type='hidden' name='Clusternames' value='ASIAIDHTLAmetisV'>
+            <input type='hidden' name='Hotelnames' value='ASIAIDHTLAmetisV'>
+            <input type='hidden' id="frommonth_2" name='frommonth'>
+            <input type='hidden' id="fromday_2" name='fromday'>
+            <input type='hidden' id="fromyear_2" name='fromyear'>
+            <div class="close clearfix">
+                <a class="left"><span>&lt;</span><span>TO MENU</span></a>
+                <img src="img/close-ftm.png" class="right" />
+            </div>
+            <div class="title-ftm">BOOKING</div>
+            <div class="brief-ftm">
+                <p>CHECK ROOM AVAILABILITY,</p>
+                <p>RATES AND BOOK ONLINE.</p>
+            </div>
+            <div class="field-ftm clearfix">
+                <div class="lbl-ftm left">From</div>
+                <div class="input-ftm right"><input type="text" id="calendar_2" name="check-in" class="input-calender" placeholder="Choose Date" /></div>
+            </div>
+            <div class="field-ftm clearfix">
+                <div class="lbl-ftm left"></div>
+                <div class="input-ftm right">
+                    <select name='nbdays' class="select-night-mobile" required>
+                              <option value="" disabled selected>No of night</option>
+                              <option value='1'>1</option>
+                              <option value='2' >2</option>
+                              <option value='3' >3</option>
+                              <option value='4' >4</option>
+                              <option value='5' >5</option>
+                              <option value='6' >6</option>
+                              <option value='7' >7</option>
+                              <option value='8' >8</option>
+                              <option value='9' >9</option>
+                              <option value='10' >10</option>
+                              <option value='11' >11</option>
+                              <option value='12' >12</option>
+                              <option value='13' >13</option>
+                              <option value='14' >14</option>
+                              <option value='15' >15</option>
+                              <option value='16' >16</option>
+                              <option value='17' >17</option>
+                              <option value='18' >18</option>
+                              <option value='19' >19</option>
+                              <option value='20' >20</option>
+                              <option value='21' >21</option>
+                              <option value='22' >22</option>
+                              <option value='23' >23</option>
+                              <option value='24' >24</option>
+                              <option value='25' >25</option>
+                              <option value='26' >26</option>
+                              <option value='27' >27</option>
+                              <option value='28' >28</option>
+                              <option value='29' >29</option>
+                              <option value='30' >30</option>
+                              <option value='31' >31</option>
+                  </select> 
+                </div>
+            </div>
+            <div class="field-ftm clearfix">
+                <div class="input-ftm right"><input type="text" name="AccessCode" class="iata-code" placeholder="IATA Code" /></div>
+            </div>
+            <input type="button" value="Check Availability" class="check-availability-ftm" onclick='hhotelDispoprice(this.form)' />
+         </form>
+    </div>
+    
+    
+</div>
+<!-- Header End -->
+
+
+<!-- Slider Start -->
+<section class="section-slider loader section-60">
+	<a href="index.html" class="logo"><img src="img/logo.png"></a>
+	<div id="sliders" class="sliders">
+    	<!-- List Slider Start -->
+    	<div class="slide item">
+        	<div class="bg-slide" style="background:url(file/slide_5.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide"></div>
+        </div>
+        <div class="slide item">
+        	<div class="bg-slide" style="background:url(file/slide_1.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide"></div>
+        </div>
+        
+        <div class="slide item" >
+        	<div class="bg-slide" style="background:url(file/slide_3.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide"></div>
+        </div>
+        <div class="slide item " >
+        	<div class="bg-slide" style="background:url(file/slide_4.jpg) no-repeat center center;background-size:cover;"></div>
+        	<div class="slide-gray fade-effect transition_slide"></div>
+        </div>
+        <!-- List Slider End -->
+    </div>
+    <div class="num-info-slide">
+    	<span class="current-slide">1</span> / <span class="max-slide">4</span>
+    </div>
+</section>
+<!-- Slider End -->
+<div class="rate-style-desc first-desciption description_transition show-on-load fblack" id="publish-rate-style">
+	<div class="middle-rate-style middle-rate-style-big-screen clearfix desc top_transition">
+      <h2 class="title">PUBLISH RATES</h2>
+      <div class="border-title-rate"></div>
+    
+      <div class="publish-rate clearfix">
+          <ul class="ul-rate-style left">
+              <li>Villa Types</li>
+              <li>Premiere Villa (Sleeps 2)</li>
+              <li>Imperial Villa (Sleeps 2) </li>
+              <li>Grand Villa (Sleeps 4)</li>
+              <li>Grand Villa (Sleeps 6)</li>
+          </ul>
+          <ul class="ul-rate-style left">
+              <li>2013</li>
+              <li>$ 650 ++</li>
+              <li>$ 700 ++</li>
+              <li>$ 1.025 ++</li>
+              <li>$ 1.425 ++</li>
+          </ul>
+          <ul class="ul-rate-style left">
+              <li>2014</li>
+              <li>$ 700 ++</li>
+              <li>$ 750 ++</li>
+              <li>$ 1.100 ++</li>
+              <li>$ 1.550 ++</li>
+          </ul>
+      </div>
+      <p class="gray-note">Rates are subject to 21% tax & service charge</p>   
+    </div>
+    <div class="first-desciption description_transition show-on-load" id="publish-rate-mobile-container">
+        <div class="publish-rate-mobile  desc top_transition" >
+            <h3>Villa Types</h3>
+            <!-- List box prm Start -->
+            <div class="box-prm">
+                <div class="title">Premiere Villa (Sleeps 2)</div>
+                <div class="years clearfix">
+                    <div class="year left">
+                        <p class="mb0">2013</p>
+                        <p class="mb0">$ 650 ++</p>
+                    </div>
+                    <div class="year left">
+                        <p class="mb0">2014</p>
+                        <p class="mb0">$ 700 ++</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prm">
+                <div class="title">Imperial Villa (Sleeps 2) </div>
+                <div class="years clearfix">
+                    <div class="year left">
+                        <p class="mb0">2013</p>
+                        <p class="mb0"><b>$ 700 ++</b></p>
+                    </div>
+                    <div class="year left">
+                        <p class="mb0">2014</p>
+                        <p class="mb0"><b>$ 750 ++</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prm">
+                <div class="title">Grand Villa (Sleeps 4)</div>
+                <div class="years clearfix">
+                    <div class="year left">
+                        <p class="mb0">2013</p>
+                        <p class="mb0"><b>$ 1.025 ++</b></p>
+                    </div>
+                    <div class="year left">
+                        <p class="mb0">2014</p>
+                        <p class="mb0"><b>$ 1.100 ++</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prm">
+                <div class="title">Grand Villa (Sleeps 6)</div>
+                <div class="years clearfix">
+                    <div class="year left">
+                        <p class="mb0">2013</p>
+                        <p class="mb0"><b>$ 1.025 ++</b></p>
+                    </div>
+                    <div class="year left">
+                        <p class="mb0">2014</p>
+                        <p class="mb0"><b>$ 1.100 ++</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prm">
+	            	<p  class="gray-note">Rates are subject to 21% tax & service charge</p>
+            </div>
+            <!-- List box prm End -->
+        </div>
+    </div>
+</div>
+
+
+<div class="rate-style-desc rate-style-desc-gray description_transition fblack" id="publish-rate-style-2">
+	<div class="middle-rate-style clearfix  desc top_transition">
+    	<h2 class="title">Rate Include</h2>
+        <div class="border-title-rate"></div>
+        <div class="two-colum-rate-style clearfix">
+        	<div class="colum-rate-style left">
+            	<p><b>Luxury benefit as:</b></p>
+                <ul>
+                	<li>Return airport transfer with Ametis exclusive private car</li>
+                    <li>Special Cocktails or Mocktails Welcome drink upon arrival based on Guest preference</li>
+                    <li>Refreshing chilled towel upon arrival.</li>
+                    <li>30 minute relaxing massage</li>
+                    <li>Daily breakfast on 7 kinds variation menu</li>
+                    <li>Fully complimentary coffee, tea and homemade snack around Ametis villa from 07.00 am to 11.00pm</li>
+                    <li>Daily complimentary sunset cocktail and canapés at Restaurant & Lounge from 18.00 pm to 20.00 pm</li>
+                </ul>
+            </div>
+            <div class="colum-rate-style left">
+            	<p>&nbsp;</p>
+                <ul>
+                	<li>Daily complimentary afternoon tea at Restaurant, Lounge or in villa from 16:00-18:00</li>
+                    <li>Daily fresh fruit and flower arrangement in villa</li>
+                    <li>Daily Newspaper ( based on Language preference )</li>
+                    <li>24 hours drop and pick up service by Ametis private car within Canggu and Seminyak area</li>
+                    <li>One on One Butler service</li>
+                    <li>24 hours WIFI internet access</li>
+                    <li>Complimentary daily stocked mini bar in villa (soft drinks, beer)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="rate-style-desc description_transition fblack" id="publish-rate-style-3">
+	<div class="middle-rate-style clearfix desc top_transition">
+    	<h2 class="title">Terms and agreement</h2>
+        <div class="border-title-rate"></div>
+        <div class="two-colum-rate-style clearfix">
+        	<div class="colum-rate-style left">
+            	<p>Rates are exclusive of 10% service charge and prevailing 11% government taxes, per villa per night</p>
+                <p class="mb0">High & Peak Season Periods:</p>
+                <p class="mb0">High season: <b>July 1 – September 31</b></p>
+                <p>Peak season: <b>December 20 – January 10</b></p>
+                <p>All reservations are subject to availability and confirmation.</p>
+                <p><b>Period of Occupancy:</b></p>
+                <p>The villa will be available for occupancy after 2.00pm on the day of arrival; check-out time is 12:00 noon.</p>
+                <p>Villas used from 12:00am to 6:00pm on the day of departure will be charged at 50% of from the rate and will be subject on availability</p>
+                <p><b>Children Policy:</b></p>
+                <p>Kindly please be advised that accommodation at Ametis Villa is suitable only for guest aged 12 years and over. Children aged 12 years and 16 years old has alternative to stay with their parents in the same villa on existing sofa bed in Imperial Villa and Grand Villa, or stay at independent villa compound separately with parents.</p>
+                <p class="mb0"><b>Imperial Villa:</b> Maximum one sofa bed is available at <b>US$75++</b> per person per night includes daily breakfast and daily afternoon tea</p>
+                <p><b>Grand Vill :</b> Maximum two sofa beds are available at <b>US$75++</b> per person per night includes daily breakfast and daily afternoon tea</p>
+                <p>Eternal home-style dining and Ametis Lounge welcome all ages as well as the children under 12 years old accompanied by parents or guardian.</p>
+            </div>
+            <div class="colum-rate-style left">
+            	<p><b>Additional person</b></p>
+                <p class="mb0">No extra bed is allowed</p>
+                <p>3rd adult in the same room is not allowed</p>
+                <p><b>Terms of Payment:</b></p>
+                <p>For confirming the reservation, Ametis Villa request your credit card details. Credit card authorization form will be sent by Ametis Villa and please complete the form, send us copy of the card (front & back side), together with copy of the cardholder’s passport. The details should be sent by fax to <b>+62 361 8445557</b> otherwise the reservation will be not considered as confirm booking</p>
+                <p><b>Cancellation Policy:</b></p>
+                <p>For reservation guaranteed, the Ametis Villa reserves the right to levy the following charges, for cancellations made and no show:</p>
+                <p>One night charges per villa will be forfeited for any cancellation made 14 days for low season, 21 days in high season, 30 days in Peak Season before arrival date</p>
+                <p>Full nights charges per villa will be forfeited for any cancellation made 07 days for low season, 14 days in high season, 21 days in Peak Season before arrival date</p>
+                <p>No shows and early departures will be charged in full for the total number of nights per villa reserved.</p>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- Footer Start -->
+<div id="footer" class="footer transition_600 scaling_low footer_scalling_low_effect">
+	<div class="first-footer">
+    	<div class=" middle clearfix">
+        	<div class="left">
+                <div class="social-media clearfix">
+                    <a href="https://www.facebook.com/ametisvillabali"><img src="img/fb.png"></a>
+                    <a href="https://twitter.com/ametisvillabali"><img src="img/twitter.png"></a>
+                    <a href="https://plus.google.com/u/0/+AmetisVillaBali"><img src="img/g+.png"></a>
+                    <a href="https://www.instagram.com/ametisvillabali/"><img src="img/insta.png"></a>
+                </div>
+                <div class="newsletter-subscribe">
+                    <div class="title qs-font">NEWSLETTER SUBSCRIPTION</div>
+                    <div class="form bb-white clearfix">
+                        <form action="http://ametisvillabali.createsend.com/t/i/s/hitye/" method="post" id="subForm">
+                                <input id="fieldEmail" name="cm-hitye-hitye" type="email" class="left email" required />
+                                <button type="submit" class="right">Subscribe</button>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="title qs-font">GET IN TOUCH</div>
+                <div class="bb-white"></div>
+                <div class="address">Jalan Pantai Batu Bolong, Canggu - Kuta, Bali, Indonesia</div>
+                <div class="detail-contact">
+                    <p><b>Phone:</b> +62 361 844 5567 <span>|</span> +62 828 9719 1888</p>
+                    <p><b>Fax:</b> +62 361 844 5557</p>
+                    <p><b>E-mail:</b> info@ametisvilla.com</p>
+                </div>
+            </div>
+        </div>
+    	
+    </div>
+    <div class="second-footer">
+    	<div class=" middle clearfix">
+        	<p class="left">Copyright &copy; 2011 ametis private villa</p>
+            <!-- Menu Buttom Start -->
+            <div class="links-bottom right">
+              <a href="contact.html">Contact Us</a>
+              <a href="ametisvillabali.smugmug.com">Media</a>
+              <a href="http://www.ametisvilla.com/wp/">News</a>
+              <a href="pressrelease.html">Press</a>
+              <a href="news-release.html">Awards</a>
+              <a href="review.html">Review</a>
+            </div>
+            <!-- Menu Buttom End -->
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+</body>
+</html>
